@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="node_modules/echarts/dist/echarts.js"></script>
+    <script src="node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="node_modules/echarts-leaflet/dist/echarts-leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="tdashhead row-sm-12">
+            <div class="col-sm-12">
+                <label class="topdash">COVID-19 LIVE Dashboard</label>
+            </div>
+        </div>
+        <br>
+        <div class="totalConfirmedCases">
+            <div>
+                <label class="medit">Total Confirmed Cases Globally</label>
+                <label id="totalval"></label>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="displayCountries col-sm-2">
+                <div class="countryList">
+                    <label class="headingCList">Top Confirmed Cases <b>(1-5)</b></label>
+                    <br>
+
+                    <label id="firstCKey"></label>
+                    <label id="firstCValue" class="countryVal"></label>
+                    <br>
+
+                    <label id="secondCKey"></label>
+                    <label id="secondCValue" class="countryVal"></label>
+                    <br>
+
+                    <label id="thirdCKey"></label>
+                    <label id="thirdCValue" class="countryVal"></label>
+                    <br>
+
+                    <label id="fourthCKey"></label>
+                    <label id="fourthCValue" class="countryVal"></label>
+                    <br>
+
+                    <label id="fifthCKey"></label>
+                    <label id="fifthCValue" class="countryVal"></label>
+                    <br>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div id="main" style="width: 100%; height: 540px; margin-top: 0; margin:auto; display: block;"></div>
+            </div>
+            <div class="displayCountries col-sm-2">
+                <div class="countryList">
+                    <label class="headingCList">Top Confirmed Cases <b>(6-10)</b></label>
+                    <br>
+
+                    <label id="sixthCKey"></label>
+                    <label id="sixthCValue" class="countryVal"></label>
+
+                    <br>
+                    <label id="seventhCKey"></label>
+                    <label id="seventhCValue" class="countryVal"></label>
+
+                    <br>
+                    <label id="eighthCKey"></label>
+                    <label id="eighthCValue" class="countryVal"></label>
+
+                    <br>
+                    <label id="ninthCKey"></label>
+                    <label id="ninthCValue" class="countryVal"></label>
+
+                    <br>
+                    <label id="tenthCKey"></label>
+                    <label id="tenthCValue" class="countryVal"></label>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="barGraphConfirmedAndRecoveries col-sm-9">
+                        <label class="pichartHead">Top Confirmed Cases with Recoveries </label>
+                        <div id="barChart"
+                            style="width: 100%; height: 280%; padding: 0;display: block; margin-left: 4%;"></div>
+                    </div>
+                    <div class="pieChart col-sm-2">
+                        <label class="pichartHead">Most Deaths</label>
+                        <div id="donut" style="width: 100%; height: 280%;padding: 0;display: block; margin: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="todayCountry col-sm-11">
+                                <label class="pichartHead">Today's Highest Cases with Deaths</label>
+                                <div id="barChartForToday"
+                                    style="width: 100%; height: 280%; padding: 0;display: block; margin-left: 4%;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+        
+
+        <script src="app.js"></script>
+   
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;\red244\green245\blue244;}
+{\*\expandedcolortbl;;\cssrgb\c20000\c20000\c20000;\cssrgb\c96471\c96863\c96471;}
+\margl1440\margr1440\vieww12000\viewh10960\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+Select p.maker\
+From product p.smarphone s\
+Where p.model = s.model\
+\
+AND \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Select max(s.speed)\
+FROM smartphones s\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Where s.ram =\
+Select max(ram)\
+FROM smartphones\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 SELECT \'a0P1.maker\
+FROM Product P1, Smartphone S1\
+WHERE P1.model=S1.model\
+\'a0 \'a0 \'a0AND S1.speed =\
+\'a0 \'a0 \'a0 \'a0 \'a0 (SELECT MAX(S2.speed)\
+\'a0 \'a0 \'a0 \'a0 \'a0 FROM \'a0 \'a0Smartphone S2\
+\'a0 \'a0 \'a0 \'a0 \'a0 WHERE \'a0 S2.ram =\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0(SELECT MAX(ram)\
+\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0FROM Smartphone)\
+);\'a0}
